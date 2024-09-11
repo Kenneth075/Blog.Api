@@ -1,4 +1,5 @@
-﻿using Application.Features.Queries.GetBlogs;
+﻿using Application.Features.Queries.GetBlogById;
+using Application.Features.Queries.GetBlogs;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -19,6 +20,17 @@ namespace WebApi.Controllers
         {
             var result = await Mediator.Send(new GetBlogsQuery());
             return Ok(result);
+        }
+
+        [HttpGet("{id}")]
+        public async Task<ActionResult<GetBlogByIdResponse>> GetBlogById(int id)
+        {
+            var response = await Mediator.Send(new GetBlogByIdQuery() {Id = id});
+            if (response.Blog == null)
+            {
+                return NotFound();
+            }
+            return Ok(response);
         }
     }
 }

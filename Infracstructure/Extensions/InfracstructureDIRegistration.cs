@@ -17,7 +17,7 @@ namespace Infracstructure.Extensions
         {
             services.AddDbContext<BlogDbContext>(options =>
             {
-                options.UseSqlServer(configuration.GetConnectionString("dkk"), x => x.EnableRetryOnFailure());
+                options.UseSqlServer(configuration.GetConnectionString("DbCon"), x => x.EnableRetryOnFailure());
             });
 
             services.AddScoped(typeof(IRepository<>), typeof(BlogRepository<>));
