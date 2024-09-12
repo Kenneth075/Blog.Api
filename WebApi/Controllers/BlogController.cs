@@ -1,9 +1,9 @@
 ﻿using Application.Features;
-using Application.Features.Commands.CreateBlog;
-using Application.Features.Commands.DeleteBlog;
-using Application.Features.Commands.UpdateBlog;
-using Application.Features.Queries.GetBlogById;
-using Application.Features.Queries.GetBlogs;
+using Application.Features.Blogs.Commands.CreateBlog;
+using Application.Features.Blogs.Commands.DeleteBlog;
+using Application.Features.Blogs.Commands.UpdateBlog;
+using Application.Features.Blogs.Queries.GetBlogById;
+using Application.Features.Blogs.Queries.GetBlogs;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;

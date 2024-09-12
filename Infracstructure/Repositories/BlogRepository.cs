@@ -10,7 +10,7 @@ namespace Infracstructure.Repositories
 {
     public class BlogRepository<T> : IRepository<T> where T : class
     {
-        private readonly BlogDbContext blogDbContext;
+        internal readonly BlogDbContext blogDbContext;
 
         public BlogRepository(BlogDbContext blogDbContext)
         {

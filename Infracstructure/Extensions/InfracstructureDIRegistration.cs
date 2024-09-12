@@ -21,6 +21,7 @@ namespace Infracstructure.Extensions
             });
 
             services.AddScoped(typeof(IRepository<>), typeof(BlogRepository<>));
+            services.AddTransient<IAuthorRepository, AuthorRepository>();
 
             return services;
         }

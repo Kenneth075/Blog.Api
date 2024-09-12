@@ -4,12 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Domain.Entities
+namespace Application.Features.Blogs.Commands.UpdateBlog
 {
-    public class Author
+    public class UpdateBlogRequestDto
     {
-        public int Id { get; set; }
         public string Name { get; set; }
-        public string Email { get; set; }
+        public string Description { get; set; }
     }
 }
