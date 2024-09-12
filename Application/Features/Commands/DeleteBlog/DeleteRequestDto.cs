@@ -4,12 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Domain.Entities
+namespace Application.Features.Commands.DeleteBlog
 {
-    public class Author
+    public class DeleteRequestDto
     {
-        public Guid Id { get; set; }
         public string Name { get; set; }
-        public string Email { get; set; }
+        public string Description { get; set; }
     }
 }

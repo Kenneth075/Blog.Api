@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Domain.Entities
+namespace Application.Features.Commands.CreateBlog
 {
-    public class Author
+    public class CreateBlogRequestDto
     {
-        public Guid Id { get; set; }
         public string Name { get; set; }
-        public string Email { get; set; }
+        public string Description { get; set; }
+
     }
 }
