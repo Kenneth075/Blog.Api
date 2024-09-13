@@ -10,5 +10,6 @@ namespace Application.Interfaces
     public interface IAuthorRepository : IRepository<Author>
     {
         Task<List<Author>> GetAllAuthorsAsync(string name);
+        Task<Author> CreateAuthorAsync(Author author);
     }
 }

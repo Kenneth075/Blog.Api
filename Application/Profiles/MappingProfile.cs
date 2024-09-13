@@ -1,4 +1,5 @@
 ﻿using Application.Features;
+using Application.Features.Authors.Commands.CreateAuthor;
 using Application.Features.Blogs.Commands.CreateBlog;
 using Application.Features.Blogs.Commands.UpdateBlog;
 using AutoMapper;
@@ -22,6 +23,7 @@ namespace Application.Profiles
             CreateMap<Blog, UpdateBlogRequestDto>().ReverseMap();
             CreateMap<Blog, UpdateBlogResponse>().ReverseMap();
             CreateMap<Author, AuthorDto>().ReverseMap();
+            CreateMap<Author, CreateAuthorRequestDto>().ReverseMap();
         }
 
     }

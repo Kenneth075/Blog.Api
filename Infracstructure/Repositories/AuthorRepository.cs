@@ -15,10 +15,20 @@ namespace Infracstructure.Repositories
         {
             
         }
+
+       
+
         public async Task<List<Author>> GetAllAuthorsAsync(string name)
         {
             var result = await blogDbContext.Authors.Where(x => x.Name.Contains(name.ToUpper())).ToListAsync();
             return result;
+        }
+
+        public async Task<Author> CreateAuthorAsync(Author author)
+        {
+            await blogDbContext.AddAsync(author);
+            await blogDbContext.SaveChangesAsync();
+            return author;
         }
     }
 }
